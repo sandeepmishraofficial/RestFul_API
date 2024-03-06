@@ -1,28 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>All post</title>
+    <title>All posts</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<h1>Quora Post </h1>
+<h1>Quora Post</h1>
 
-<% for (post of posts) {%>
-    <div class="post">
-        <h3 class="user">@<%= post.username %></h3>
-        <h4 class="content"><%= post.content %></h4>
-        <br>
-        <a href="http://localhost:8080/posts/<%=post.id%>">See in Detail</a>
-    </div>
+<div class="post-container">
+    <% for (post of posts) { %>
+        <div class="post">
+            <h3 class="user">@<%= post.username %></h3>
+            <h4 class="content"><%= post.content %></h4>
+            <a href="http://localhost:8080/posts/<%= post.id %>">See in Detail</a>
+        </div>
+    <% } %>
+</div>
 
-<%}%>
-
-<br>
-<a href="http://localhost:8080/posts/new">Create New Post </a>
+<a class="create-post-link" href="http://localhost:8080/posts/new">Create New Post</a>
 </body>
 </html>
-

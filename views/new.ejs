@@ -1,17 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>create new post</title>
+    <title>Create New Post</title>
+    <link rel="stylesheet" href="/new.css">
 </head>
 <body>
-<form method="post" action="/posts">
-    <input type="text" placeholder="enter username" name="username"/> <br><br>
-    <textarea placeholder="write your post" name="content"></textarea><br>
-    <button>Submit post</button>
-</form>
+<div class="form-container">
+    <h1>Create New Post</h1>
+    <form method="post" action="/posts">
+        <input type="text" placeholder="Enter username" name="username"/><br>
+        <textarea placeholder="Write your post" name="content"></textarea><br>
+        <button>Submit Post</button>
+    </form>
+</div>
 </body>
 </html>
